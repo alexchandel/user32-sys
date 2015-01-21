@@ -51,6 +51,7 @@ extern "system" {
     pub fn PostMessageW(hWnd: HWND, Msg: UINT, wParam: WPARAM, lParam: LPARAM) -> BOOL;
     pub fn PostQuitMessage(nExitCode: c_int);
     pub fn RegisterClassExW(lpWndClass: *const WNDCLASSEXW) -> ATOM;
+    pub fn SendInput(nInputs: UINT, pInputs: LPINPUT, cbSize: c_int) -> UINT;
     pub fn SetForegroundWindow(hWnd: HWND) -> BOOL;
     pub fn SetWindowPos(
         hWnd: HWND, hWndInsertAfter: HWND, X: c_int, Y: c_int, cx: c_int, cy: c_int, uFlags: UINT,
