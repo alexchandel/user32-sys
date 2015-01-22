@@ -37,6 +37,7 @@ extern "system" {
     pub fn GetMessageW(lpMsg: LPMSG, hWnd: HWND, wMsgFilterMin: UINT, wMsgFilterMax: UINT) -> BOOL;
     pub fn GetWindowPlacement(hWnd: HWND, lpwndpl: *mut WINDOWPLACEMENT) -> BOOL;
     pub fn GetWindowRect(hWnd: HWND, lpRect: LPRECT) -> BOOL;
+    pub fn GetSystemMetrics(nIndex: c_int) -> c_int;
     pub fn MessageBoxA(hWnd: HWND, lpText: LPCSTR, lpCaption: LPCSTR, uType: UINT) -> c_int;
     pub fn MessageBoxW(hWnd: HWND, lpText: LPCWSTR, lpCaption: LPCWSTR, uType: UINT) -> c_int;
     pub fn MessageBoxExA(
